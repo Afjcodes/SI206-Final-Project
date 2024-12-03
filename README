@@ -1,0 +1,2 @@
+We plan on using two different APIs- one related to weather data and one related to football scores. Our idea is to find some sort of correlation 
+that exists between the two and see whether our hypothesis is valid after compiling the data.
