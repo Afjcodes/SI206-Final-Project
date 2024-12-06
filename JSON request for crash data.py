@@ -52,14 +52,14 @@ def merge_crash_data(existing_data, new_data, state_id):
     return existing_data
 
 def main():
-    url_template = "https://crashviewer.nhtsa.dot.gov/CrashAPI/analytics/GetInjurySeverityCounts?fromCaseYear=2014&toCaseYear=2015&state=1&format=json"
+    url_template = "https://crashviewer.nhtsa.dot.gov/CrashAPI/analytics/GetInjurySeverityCounts?fromCaseYear=2021&toCaseYear=2022&state=1&format=json"
     
     # Initialize an empty JSON structure
     combined_data = {
         "Count": 0,
         "Message": "Combined Results",
         "Results": [[]],  # Placeholder for the combined results
-        "SearchCriteria": "FromYear: 2014 | ToYear: 2015"
+        "SearchCriteria": "FromYear: 2021 | ToYear: 2022"
     }
 
     for state_id in VALID_STATE_IDS:
