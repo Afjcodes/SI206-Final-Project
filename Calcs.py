@@ -44,7 +44,27 @@ def create_population_table(data,cur,conn):
 
     conn.commit()
         
+def lowest_pops_graph(cur,conn,year):
+    colors = ["#e8d8e0","#aebbdb","#dbc4bc","#ecd8d7","#f4a29d",
+              "#cad69e","#cbaedb","#d6bf9f","#b4cbe9","#ece6a2"]
+    fig = plt.figure(1,figsize = (15,5))
+    ax1 = fig.add_subplot(122)
+    cur.execute(f"SELECT Populations.population, Populations.state FROM Populations WHERE year = {year}")
+    popcounts = cur.fetchall()
+    bottom10 = sorted(popcounts, key= lambda x: int(x[0]), reverse = False)[:10]
+    popnums = []
+    statenames = []
+    for i in bottom10:
+        popnums.append(i[0])
+        statenames.append(i[1])
 
+    ax1.barh(statenames, popnums,color = colors)
+    ax1.ticklabel_format(axis='x',style='plain')
+    ax1.set_xlabel("Population")
+    ax1.set_ylabel('States')
+    ax1.set_title(f'10 States with the Lowest Population in {year}')
+    plt.ticklabel_format(axis='x',style = 'plain')
+    plt.show()
 
 def create_pie_chart(cur,conn,year):
     colors = ["#e8d8e0","#aebbdb","#dbc4bc","#ecd8d7","#f4a29d",
@@ -171,9 +191,10 @@ def main():
     crashes_by_pop(cur,conn)
 
     #Visualizations
-    create_pie_chart(cur,conn,2021)
-    create_pie_chart(cur,conn,2022)
-    
+    #create_pie_chart(cur,conn,2021)
+    #create_pie_chart(cur,conn,2022)
+    lowest_pops_graph(cur,conn,2021)
+
 
 
 
