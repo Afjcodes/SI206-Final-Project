@@ -38,7 +38,6 @@ def create_population_table(data,cur,conn):
         row_id = cur.lastrowid
         #print(row_id)
         if row_id != 0:
-
             count +=1
 
     conn.commit()
