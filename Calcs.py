@@ -3,6 +3,8 @@ import json
 import os
 import requests
 import re
+import matplotlib.pyplot as plt
+
 
 #URL for requests
 url = f'https://datausa.io/api/data?drilldowns=State&measures=Population&year='
@@ -44,7 +46,22 @@ def create_population_table(data,cur,conn):
         
 
 
-    
+def create_pie_chart(cur,conn,year):
+    colors = ["#e8d8e0","#aebbdb","#dbc4bc","#ecd8d7","#f4a29d",
+              "#cad69e","#cbaedb","#d6bf9f","#b4cbe9","#ece6a2"]
+    cur.execute(f"SELECT crash_data.crash_counts, crash_data.unique_id FROM crash_data WHERE case_year = {year}")
+    crashcounts = cur.fetchall()
+    top10 = sorted(crashcounts, key= lambda x: int(x[0]), reverse = True)[:10]
+    crashnums = []
+    statenames = []
+    for i in top10:
+        crashnums.append(i[0])
+        statenames.append(i[1])
+    fig = plt.figure(1,figsize=(10,10))
+    ax1 = fig.add_subplot(121)
+    ax1.pie(crashnums, labels = statenames, autopct = '%1.1f%%', colors = colors)
+    ax1.set_title('Top 10 States with Car Crashes')
+    plt.show()
 
      
 
@@ -152,6 +169,15 @@ def main():
 
     #Calculations
     crashes_by_pop(cur,conn)
+
+    #Visualizations
+    create_pie_chart(cur,conn,2021)
+    create_pie_chart(cur,conn,2022)
+    
+
+
+
+
     # Commit changes and close the connection
     conn.commit()
     conn.close()
