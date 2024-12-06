@@ -1,0 +1,609 @@
+{
+  "Count": 100,
+  "Message": "Combined Results",
+  "Results": [
+    [
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 747,
+        "TotalFatalCounts": 820,
+        "State": 1
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 784,
+        "TotalFatalCounts": 850,
+        "State": 1
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 68,
+        "TotalFatalCounts": 73,
+        "State": 2
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 60,
+        "TotalFatalCounts": 65,
+        "State": 2
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 708,
+        "TotalFatalCounts": 773,
+        "State": 4
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 811,
+        "TotalFatalCounts": 897,
+        "State": 4
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 436,
+        "TotalFatalCounts": 470,
+        "State": 5
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 491,
+        "TotalFatalCounts": 550,
+        "State": 5
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 2859,
+        "TotalFatalCounts": 3102,
+        "State": 6
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 3123,
+        "TotalFatalCounts": 3387,
+        "State": 6
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 451,
+        "TotalFatalCounts": 488,
+        "State": 8
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 507,
+        "TotalFatalCounts": 547,
+        "State": 8
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 234,
+        "TotalFatalCounts": 248,
+        "State": 9
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 257,
+        "TotalFatalCounts": 270,
+        "State": 9
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 109,
+        "TotalFatalCounts": 124,
+        "State": 10
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 127,
+        "TotalFatalCounts": 131,
+        "State": 10
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 2336,
+        "TotalFatalCounts": 2494,
+        "State": 12
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 2699,
+        "TotalFatalCounts": 2938,
+        "State": 12
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 1080,
+        "TotalFatalCounts": 1164,
+        "State": 13
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 1329,
+        "TotalFatalCounts": 1432,
+        "State": 13
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 94,
+        "TotalFatalCounts": 95,
+        "State": 15
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 85,
+        "TotalFatalCounts": 93,
+        "State": 15
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 175,
+        "TotalFatalCounts": 186,
+        "State": 16
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 198,
+        "TotalFatalCounts": 216,
+        "State": 16
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 845,
+        "TotalFatalCounts": 924,
+        "State": 17
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 914,
+        "TotalFatalCounts": 998,
+        "State": 17
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 704,
+        "TotalFatalCounts": 745,
+        "State": 18
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 752,
+        "TotalFatalCounts": 817,
+        "State": 18
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 288,
+        "TotalFatalCounts": 322,
+        "State": 19
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 282,
+        "TotalFatalCounts": 320,
+        "State": 19
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 341,
+        "TotalFatalCounts": 385,
+        "State": 20
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 322,
+        "TotalFatalCounts": 355,
+        "State": 20
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 612,
+        "TotalFatalCounts": 672,
+        "State": 21
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 694,
+        "TotalFatalCounts": 761,
+        "State": 21
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 665,
+        "TotalFatalCounts": 740,
+        "State": 22
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 698,
+        "TotalFatalCounts": 752,
+        "State": 22
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 115,
+        "TotalFatalCounts": 131,
+        "State": 23
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 144,
+        "TotalFatalCounts": 156,
+        "State": 23
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 416,
+        "TotalFatalCounts": 442,
+        "State": 24
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 479,
+        "TotalFatalCounts": 520,
+        "State": 24
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 336,
+        "TotalFatalCounts": 354,
+        "State": 25
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 327,
+        "TotalFatalCounts": 344,
+        "State": 25
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 831,
+        "TotalFatalCounts": 901,
+        "State": 26
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 896,
+        "TotalFatalCounts": 967,
+        "State": 26
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 324,
+        "TotalFatalCounts": 361,
+        "State": 27
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 375,
+        "TotalFatalCounts": 411,
+        "State": 27
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 543,
+        "TotalFatalCounts": 607,
+        "State": 28
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 604,
+        "TotalFatalCounts": 677,
+        "State": 28
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 696,
+        "TotalFatalCounts": 766,
+        "State": 29
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 803,
+        "TotalFatalCounts": 870,
+        "State": 29
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 176,
+        "TotalFatalCounts": 192,
+        "State": 30
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 204,
+        "TotalFatalCounts": 224,
+        "State": 30
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 203,
+        "TotalFatalCounts": 225,
+        "State": 31
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 218,
+        "TotalFatalCounts": 246,
+        "State": 31
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 268,
+        "TotalFatalCounts": 291,
+        "State": 32
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 297,
+        "TotalFatalCounts": 326,
+        "State": 32
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 89,
+        "TotalFatalCounts": 95,
+        "State": 33
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 103,
+        "TotalFatalCounts": 114,
+        "State": 33
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 523,
+        "TotalFatalCounts": 556,
+        "State": 34
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 521,
+        "TotalFatalCounts": 561,
+        "State": 34
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 340,
+        "TotalFatalCounts": 386,
+        "State": 35
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 269,
+        "TotalFatalCounts": 298,
+        "State": 35
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 980,
+        "TotalFatalCounts": 1041,
+        "State": 36
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 1061,
+        "TotalFatalCounts": 1136,
+        "State": 36
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 1188,
+        "TotalFatalCounts": 1284,
+        "State": 37
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 1275,
+        "TotalFatalCounts": 1379,
+        "State": 37
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 121,
+        "TotalFatalCounts": 135,
+        "State": 38
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 111,
+        "TotalFatalCounts": 131,
+        "State": 38
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 917,
+        "TotalFatalCounts": 1006,
+        "State": 39
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 1029,
+        "TotalFatalCounts": 1110,
+        "State": 39
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 589,
+        "TotalFatalCounts": 669,
+        "State": 40
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 590,
+        "TotalFatalCounts": 645,
+        "State": 40
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 322,
+        "TotalFatalCounts": 357,
+        "State": 41
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 411,
+        "TotalFatalCounts": 446,
+        "State": 41
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 1107,
+        "TotalFatalCounts": 1195,
+        "State": 42
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 1102,
+        "TotalFatalCounts": 1200,
+        "State": 42
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 51,
+        "TotalFatalCounts": 51,
+        "State": 44
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 41,
+        "TotalFatalCounts": 45,
+        "State": 44
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 756,
+        "TotalFatalCounts": 823,
+        "State": 45
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 911,
+        "TotalFatalCounts": 979,
+        "State": 45
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 125,
+        "TotalFatalCounts": 136,
+        "State": 46
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 116,
+        "TotalFatalCounts": 134,
+        "State": 46
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 893,
+        "TotalFatalCounts": 963,
+        "State": 47
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 888,
+        "TotalFatalCounts": 962,
+        "State": 47
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 3190,
+        "TotalFatalCounts": 3536,
+        "State": 48
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 3190,
+        "TotalFatalCounts": 3582,
+        "State": 48
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 222,
+        "TotalFatalCounts": 256,
+        "State": 49
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 258,
+        "TotalFatalCounts": 278,
+        "State": 49
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 42,
+        "TotalFatalCounts": 44,
+        "State": 50
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 50,
+        "TotalFatalCounts": 57,
+        "State": 50
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 659,
+        "TotalFatalCounts": 703,
+        "State": 51
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 712,
+        "TotalFatalCounts": 754,
+        "State": 51
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 429,
+        "TotalFatalCounts": 462,
+        "State": 53
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 499,
+        "TotalFatalCounts": 551,
+        "State": 53
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 242,
+        "TotalFatalCounts": 272,
+        "State": 54
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 246,
+        "TotalFatalCounts": 268,
+        "State": 54
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 459,
+        "TotalFatalCounts": 506,
+        "State": 55
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 523,
+        "TotalFatalCounts": 566,
+        "State": 55
+      },
+      {
+        "CaseYear": "2014",
+        "CrashCounts": 131,
+        "TotalFatalCounts": 150,
+        "State": 56
+      },
+      {
+        "CaseYear": "2015",
+        "CrashCounts": 129,
+        "TotalFatalCounts": 145,
+        "State": 56
+      }
+    ]
+  ],
+  "SearchCriteria": "FromYear: 2014 | ToYear: 2015"
+}
