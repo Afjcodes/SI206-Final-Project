@@ -57,6 +57,10 @@ def read_data_from_file(filename):
     return json_data
 
 
+def crashes_by_pop(cur, conn):
+    cur.execute(f"SELECT crash_data.crash_counts, Populations.population FROM crash_data JOIN Populations ON crash_data.state_id = 26")
+    results = cur.fetchall()
+    print(results)
 
 def main():
     data22 = get_data_by_year('2022')
@@ -137,7 +141,10 @@ def main():
 
             if added_rows == limit:  # Stop after adding 25 rows
                 break
+    
 
+    #Calculations
+    crashes_by_pop(cur,conn)
     # Commit changes and close the connection
     conn.commit()
     conn.close()
