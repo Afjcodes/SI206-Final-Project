@@ -20,12 +20,12 @@ def set_up_database(db_name):
 
 def create_population_table(data,cur,conn):
     cur.execute(
-        "CREATE TABLE IF NOT EXISTS Populations (state TEXT, population INT, year INT)"
+        "CREATE TABLE IF NOT EXISTS Populations (state TEXT PRIMARY KEY, population INT, year INT)"
     )
     count = 0
     state_relevant_data = []
     for state in data:
-        statename = state['State']
+        statename = state['State']+ '_' +str(state['ID Year'])
         year = state['ID Year']
         pop = state['Population']
         state_relevant_data.append((statename,pop,year))
@@ -35,8 +35,12 @@ def create_population_table(data,cur,conn):
             break
         
         cur.execute("INSERT OR IGNORE INTO Populations (state,population,year) VALUES (?,?,?)", (state[0],state[1],state[2]))
-        
-        
+        row_id = cur.lastrowid
+        #print(row_id)
+        if row_id != 0:
+
+            count +=1
+
     conn.commit()
         
 
