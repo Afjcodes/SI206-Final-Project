@@ -58,9 +58,16 @@ def read_data_from_file(filename):
 
 
 def crashes_by_pop(cur, conn):
-    cur.execute(f"SELECT crash_data.crash_counts, Populations.population FROM crash_data JOIN Populations ON crash_data.state_id = 26")
+    cur.execute(f"SELECT crash_data.crash_counts, Populations.population FROM crash_data JOIN Populations ON crash_data.unique_id =  Populations.state WHERE crash_data.state_id = 26")
     results = cur.fetchall()
-    print(results)
+    percents = []
+    for year in results:
+        perc = year[0] / year[1]
+        percents.append(perc)
+    results = f"In comparison of the crashes divided by population from 2021 to 2022 in the state of Michigan, the calculation for 2021 was {percents[0]}, while the calculation for 2022 was {percents[1]}. We saw a slight decrease from 2021 to 2022 in Michigan."
+    with open('MichiganAveragesCalculations', 'w') as f:
+        f.write(results)
+
 
 def main():
     data22 = get_data_by_year('2022')
