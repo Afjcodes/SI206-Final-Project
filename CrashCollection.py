@@ -16,6 +16,8 @@ VALID_STATE_IDS = [
 
 def fetch_state_crash_data(state_id, url_template):
     """
+    state_id is an integer relating to a specific state
+    url_template is a String with the url for the API calls
     Fetch crash data for a specific state using the provided API URL template.
     """
     url = url_template.replace("state=1", f"state={state_id}")
