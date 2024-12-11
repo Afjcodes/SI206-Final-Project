@@ -18,6 +18,8 @@ CREATE TABLE IF NOT EXISTS states (
 """)
 
 # Add state information
+# This was necessary to be hardcoded since the website uses these id's to refer to the states and there's some weirdness [Numbers being skipped and other territories]
+# Having these allowed us to call only the 50 states we wanted and ignore other locations that didn't meet our needs
 states = [
     (1, "Alabama"), (2, "Alaska"), (4, "Arizona"), (5, "Arkansas"),
     (6, "California"), (8, "Colorado"), (9, "Connecticut"),
@@ -37,7 +39,7 @@ states = [
     (56, "Wyoming")
 ]
 cursor.executemany("INSERT OR IGNORE INTO states (id, name) VALUES (?, ?)", states)
-
+#google and gpt showed executemany allows to put all of the states into the table at once
 # Create the crash_data table
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS crash_data (
@@ -58,7 +60,8 @@ limit = 25
 for entry in data["Results"][0]:
     # Get state name from the states table
     state_name = [state[1] for state in states if state[0] == entry["State"]][0]
-    unique_id = f"{state_name}_{entry['CaseYear']}"  # Create unique ID
+    unique_id = f"{state_name}_{entry['CaseYear']}"  
+    # We had to create a uniqueid for each of the combinations in order to lookup state/year combinations
 
     # Check if the unique_id already exists in the database
     cursor.execute("SELECT COUNT(*) FROM crash_data WHERE unique_id = ?", (unique_id,))

@@ -12,13 +12,14 @@ VALID_STATE_IDS = [
     27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 44, 45, 46, 47, 
     48, 49, 50, 51, 53, 54, 55, 56
 ]
-
+#These were the valid state id's for the 50 states used in the database so i had to hardcode them
 
 def fetch_state_crash_data(state_id, url_template):
     """
     state_id is an integer relating to a specific state
     url_template is a String with the url for the API calls
     Fetch crash data for a specific state using the provided API URL template.
+    Using the state id's listed on top, it changes the url template and gets data for that state
     """
     url = url_template.replace("state=1", f"state={state_id}")
     response = requests.get(url)
@@ -31,6 +32,8 @@ def fetch_state_crash_data(state_id, url_template):
 def merge_crash_data(existing_data, new_data, state_id):
     """
     Merge new crash data into existing data, avoiding overlaps based on state and year.
+    The only overlaps in data we could get is avoided by looking at the year number and stateid
+    We use these to differentiate between the existing ones and the new ones to add data to the data base
     """
     if not new_data or "Results" not in new_data or not new_data["Results"][0]:
         print(f"No new data to merge for State {state_id}.")
@@ -65,6 +68,7 @@ def main():
     }
 
     for state_id in VALID_STATE_IDS:
+        #This is where we iterate through each valid state id and start combining a json file
         print(f"Fetching data for State {state_id}...")
         state_data = fetch_state_crash_data(state_id, url_template)
         combined_data = merge_crash_data(combined_data, state_data, state_id)
