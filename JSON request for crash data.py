@@ -16,8 +16,12 @@ VALID_STATE_IDS = [
 
 def fetch_state_crash_data(state_id, url_template):
     """
+    State id: this is referring to the unique id that the state is assigned and will be changed to collect the different state data
+    URL template: Is in the main function and is the api we used to collect the data, it's a template since we have to only change the 
+    state id to receive the required info. 
     Fetch crash data for a specific state using the provided API URL template.
     Using the state id's listed on top, it changes the url template and gets data for that state
+    it returns a json that holds the data for that state
     """
     url = url_template.replace("state=1", f"state={state_id}")
     response = requests.get(url)
@@ -29,9 +33,14 @@ def fetch_state_crash_data(state_id, url_template):
 
 def merge_crash_data(existing_data, new_data, state_id):
     """
+    Existing data is the json file we already have
+    new data is anything for a state id that wasn't called
+    state id is already mentioned before, a unique key for the state
     Merge new crash data into existing data, avoiding overlaps based on state and year.
     The only overlaps in data we could get is avoided by looking at the year number and stateid
     We use these to differentiate between the existing ones and the new ones to add data to the data base
+
+    Function returns everything combined into a new "existing data" that can be used again to update
     """
     if not new_data or "Results" not in new_data or not new_data["Results"][0]:
         print(f"No new data to merge for State {state_id}.")
@@ -57,6 +66,7 @@ def merge_crash_data(existing_data, new_data, state_id):
 def main():
     url_template = "https://crashviewer.nhtsa.dot.gov/CrashAPI/analytics/GetInjurySeverityCounts?fromCaseYear=2021&toCaseYear=2022&state=1&format=json"
     
+    # Goes through all of the valid id's and combines all of the collected data using created functions to make a new json
     # Initialize an empty JSON structure
     combined_data = {
         "Count": 0,
