@@ -207,7 +207,7 @@ def main():
     #Calculations
     crashes_by_pop(cur,conn)
 
-    #Visualizations
+    # #Visualizations
     create_pie_chart(cur,conn,2021)
     create_pie_chart(cur,conn,2022)
     lowest_pops_graph(cur,conn,2021)
