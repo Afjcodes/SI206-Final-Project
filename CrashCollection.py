@@ -16,9 +16,8 @@ VALID_STATE_IDS = [
 
 def fetch_state_crash_data(state_id, url_template):
     """
-    State id: this is referring to the unique id that the state is assigned and will be changed to collect the different state data
-    URL template: Is in the main function and is the api we used to collect the data, it's a template since we have to only change the 
-    state id to receive the required info. 
+    state_id is an integer relating to a specific state
+    url_template is a String with the url for the API calls
     Fetch crash data for a specific state using the provided API URL template.
     Using the state id's listed on top, it changes the url template and gets data for that state
     it returns a json that holds the data for that state

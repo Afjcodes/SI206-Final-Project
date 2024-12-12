@@ -8,17 +8,24 @@ import re
 url = f'https://datausa.io/api/data?drilldowns=State&measures=Population&year='
 
 def get_data_by_year(year):
+    #year is an integer
+    #This function intends to use the requests library to use the url from the API and get data for a specified year, returning the response as a json.
     response = requests.get(url+year)
     data = response.json()
     return data['data']
 
 def set_up_database(db_name):
+    #db_name is the name of the database to be created.
+    #This function intends to create a database with the specified name as input, returning the cursor and connection objects.
     path = os.path.dirname(os.path.abspath(__file__))
     conn = sqlite3.connect(path + "/" + db_name)
     cur = conn.cursor()
     return cur, conn
 
 def create_population_table(data,cur,conn):
+    #data is a JSON object consisting of the data collected from the population API
+    #cur is the database cursor
+    #conn is the database connection
     cur.execute(
         "CREATE TABLE IF NOT EXISTS Populations (state TEXT PRIMARY KEY, population INT, year INT)"
     )
@@ -49,6 +56,8 @@ def create_population_table(data,cur,conn):
      
 
 def read_data_from_file(filename):
+    #filename is a String with the filename to be read from
+    #This function returns a JSON object of data from the file used as input.
     full_path = os.path.join(os.path.dirname(__file__), filename)
     f = open(full_path)
     file_data = f.read()

@@ -10,17 +10,24 @@ import matplotlib.pyplot as plt
 url = f'https://datausa.io/api/data?drilldowns=State&measures=Population&year='
 
 def get_data_by_year(year):
+    #year is an integer
+    #This function intends to use the requests library to use the url from the API and get data for a specified year, returning the response as a json.
     response = requests.get(url+year)
     data = response.json()
     return data['data']
 
 def set_up_database(db_name):
+    #db_name is the name of the database to be created.
+    #This function intends to create a database with the specified name as input, returning the cursor and connection objects.
     path = os.path.dirname(os.path.abspath(__file__))
     conn = sqlite3.connect(path + "/" + db_name)
     cur = conn.cursor()
     return cur, conn
 
 def create_population_table(data,cur,conn):
+    #data is a JSON object consisting of the data collected from the population API
+    #cur is the database cursor
+    #conn is the database connection
     cur.execute(
         "CREATE TABLE IF NOT EXISTS Populations (state TEXT PRIMARY KEY, population INT, year INT)"
     )
@@ -45,6 +52,10 @@ def create_population_table(data,cur,conn):
     conn.commit()
         
 def lowest_pops_graph(cur,conn,year):
+    #cur is the database cursor
+    #conn is the database connection
+    #year is an integer, the year the graph will be created for
+    #This function intends to create a horizontal bar chart based on data from the database regarding a specific year input with Matplotlib.
     colors = ["#e8d8e0","#aebbdb","#dbc4bc","#ecd8d7","#f4a29d",
               "#cad69e","#cbaedb","#d6bf9f","#b4cbe9","#ece6a2"]
     fig = plt.figure(1,figsize = (15,5))
@@ -67,6 +78,10 @@ def lowest_pops_graph(cur,conn,year):
     plt.show()
 
 def create_pie_chart(cur,conn,year):
+    #cur is the database cursor
+    #conn is the database connection
+    #year is an integer, the year the graph will be created for
+    #This function intends to create a pie chart based on a specific year input with Matplotlib from data in the database.
     colors = ["#e8d8e0","#aebbdb","#dbc4bc","#ecd8d7","#f4a29d",
               "#cad69e","#cbaedb","#d6bf9f","#b4cbe9","#ece6a2"]
     cur.execute(f"SELECT crash_data.crash_counts, crash_data.unique_id FROM crash_data WHERE case_year = {year}")
@@ -80,12 +95,12 @@ def create_pie_chart(cur,conn,year):
     fig = plt.figure(1,figsize=(10,10))
     ax1 = fig.add_subplot(121)
     ax1.pie(crashnums, labels = statenames, autopct = '%1.1f%%', colors = colors)
-    ax1.set_title('Top 10 States with Car Crashes')
+    ax1.set_title(f'Top 10 States with Car Crashes in {year}')
     plt.show()
 
-     
-
 def read_data_from_file(filename):
+    #filename is a String with the filename to be read from
+    #This function returns a JSON object of data from the file used as input.
     full_path = os.path.join(os.path.dirname(__file__), filename)
     f = open(full_path)
     file_data = f.read()
@@ -93,8 +108,10 @@ def read_data_from_file(filename):
     json_data = json.loads(file_data)
     return json_data
 
-
 def crashes_by_pop(cur, conn):
+    #cur is the database cursor
+    #conn is the database connection
+    #This function intends to calculate the crash count divided by population count for corresponding years in Michigan. It writes a file 'Michigan AveragesCalculations' with its results.
     cur.execute(f"SELECT crash_data.crash_counts, Populations.population FROM crash_data JOIN Populations ON crash_data.unique_id =  Populations.state WHERE crash_data.state_id = 26")
     results = cur.fetchall()
     percents = []
@@ -194,6 +211,8 @@ def main():
     create_pie_chart(cur,conn,2021)
     create_pie_chart(cur,conn,2022)
     lowest_pops_graph(cur,conn,2021)
+    lowest_pops_graph(cur,conn,2022)
+
 
 
 
